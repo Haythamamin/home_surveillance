@@ -87,7 +87,7 @@ class IPCamera(object):
 		logger.info("We are opening the video feed.")
 	 	self.url = camURL
 		if not self.video.isOpened():
-			self.video.open()
+			self.video.open(camURL)
 		logger.info("Video feed open.")
 		self.dump_video_info()  # logging every specs of the video feed
 		# Start a thread to continuously capture frames.
